@@ -2,6 +2,17 @@
 
 @import "tailwindcss";
 
-*{
+* {
     font-family: 'Cabin', sans-serif;
+}
+
+@utility bg-hero-gradient {
+    background:
+        radial-gradient(68% 60% at 83% 95%,
+            #ff3c00 9.6%,
+            rgba(247, 255, 197, 0) 100%),
+        radial-gradient(101% 70% at 3% 95%,
+            #f7ffc5 32.7%,
+            rgba(247, 255, 197, 0) 100%),
+        #fff;
 }
