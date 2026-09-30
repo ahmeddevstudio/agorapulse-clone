@@ -16,3 +16,17 @@
             rgba(247, 255, 197, 0) 100%),
         #fff;
 }
+
+@theme {
+    --animate-marquee: marquee 50s linear infinite;
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+}
