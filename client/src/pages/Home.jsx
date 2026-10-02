@@ -4,6 +4,7 @@ import TrustBar from '../components/TrustBar'
 import SocialMediaManagementSection from '../components/SocialMediaManagementSection'
 import Tabs from '../components/Tabs'
 import TourSection from '../components/TourSection'
+import IntegrationsSection from '../components/IntegrationsSection'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <SocialMediaManagementSection />
         <Tabs />
         <TourSection />
+        <IntegrationsSection />
     </div>
   )
 }

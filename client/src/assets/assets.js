@@ -7,6 +7,8 @@ import roi_tab from './roi-tab.webp'
 import reporting_tab from './reporting-tab.webp'
 import publishing_tab from './publishing-tab.webp'
 import listing_tab from './listing-tab.webp'
+import blur_img from './blur.avif'
+import integrations_pattern from './integrations-pattern.png'
 
 export const assets = {
     agorapulse_logo,
@@ -17,5 +19,7 @@ export const assets = {
     roi_tab,
     reporting_tab,
     publishing_tab,
-    listing_tab
+    listing_tab,
+    blur_img,
+    integrations_pattern
 }
