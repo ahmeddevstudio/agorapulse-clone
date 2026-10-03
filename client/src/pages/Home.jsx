@@ -7,6 +7,7 @@ import TourSection from '../components/TourSection'
 import IntegrationsSection from '../components/IntegrationsSection'
 import ReviewSection from '../components/ReviewSection'
 import FAQSection from '../components/FAQSection'
+import CTASection from '../components/CTASection'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <IntegrationsSection />
         <ReviewSection />
         <FAQSection />
+        <CTASection />
     </div>
   )
 }
