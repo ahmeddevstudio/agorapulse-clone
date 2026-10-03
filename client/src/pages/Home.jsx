@@ -5,6 +5,7 @@ import SocialMediaManagementSection from '../components/SocialMediaManagementSec
 import Tabs from '../components/Tabs'
 import TourSection from '../components/TourSection'
 import IntegrationsSection from '../components/IntegrationsSection'
+import ReviewSection from '../components/ReviewSection'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Tabs />
         <TourSection />
         <IntegrationsSection />
+        <ReviewSection />
     </div>
   )
 }

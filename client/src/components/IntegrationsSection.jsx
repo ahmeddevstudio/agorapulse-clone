@@ -81,9 +81,8 @@ const IntegrationsSection = () => {
     ]
 
     return (
-        <section className="relative isolate grid grid-cols-1 lg:grid-cols-2 gap-10 rounded-b-3xl overflow-hidden py-10 min-[1400px]:px-24">
+        <section className="relative isolate grid grid-cols-1 lg:grid-cols-2 gap-10 rounded-b-3xl overflow-hidden py-10 min-[1400px]:px-32">
 
-            {/* Background pattern image */}
             <div
                 aria-hidden="true"
                 className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center"
@@ -92,7 +91,6 @@ const IntegrationsSection = () => {
                 }}
             />
 
-            {/* Gradient overlay */}
             <div
                 aria-hidden="true"
                 className="absolute inset-0 -z-10"
@@ -117,7 +115,6 @@ const IntegrationsSection = () => {
                 }}
             />
 
-            {/* Left content */}
             <div className="relative flex flex-col gap-5 px-4 text-[#021a41] max-w-xl">
                 <p className="font-semibold">Integrations</p>
 
@@ -138,8 +135,7 @@ const IntegrationsSection = () => {
                     </button>
                 </Link>
             </div>
-
-            {/* Integration logos */}
+            
             <div className="relative grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 xl:grid-cols-5 gap-8 place-items-center content-center px-4 lg:px-0">
                 {integrationsImg.map((int) => (
                     <div
