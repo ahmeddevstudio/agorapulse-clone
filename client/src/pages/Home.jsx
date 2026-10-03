@@ -6,6 +6,7 @@ import Tabs from '../components/Tabs'
 import TourSection from '../components/TourSection'
 import IntegrationsSection from '../components/IntegrationsSection'
 import ReviewSection from '../components/ReviewSection'
+import FAQSection from '../components/FAQSection'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <TourSection />
         <IntegrationsSection />
         <ReviewSection />
+        <FAQSection />
     </div>
   )
 }
