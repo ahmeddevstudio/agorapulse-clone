@@ -1,10 +1,10 @@
+
 import React from 'react'
 import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
 const IntegrationsSection = () => {
-
     const integrationsImg = [
         {
             name: "Facebook",
@@ -78,27 +78,86 @@ const IntegrationsSection = () => {
             name: "Reddit",
             image: "https://www.agorapulse.com/assets/hv2-home2/reddit-logo.svg",
         },
-    ];
+    ]
 
     return (
-        <div className='min-[1400px]:px-24 py-10 bg-no-repeat bg-cover grid grid-cols-1 lg:grid-cols-2 gap-10' style={{ backgroundImage: `url(${assets.integrations_pattern})` }}>
-            <div className='flex flex-col gap-5 px-4 text-[#021a41] max-w-xl'>
-                <p className='font-semibold'>Integrations</p>
-                <h2 className='text-4xl font-bold'>Works perfectly with your favorite tools and platforms</h2>
-                <p className='text-lg font-medium'>No more jumping between social networks and other solutions. Use Agorapulse to centralize all of your team's social media marketing activities.</p>
-                <Link to={'integrations'}>
-                    <button className='border-[1.5px] border-[#f50] px-5 py-2 text-[#f50] rounded-full font-medium cursor-pointer flex items-center gap-4 hover:bg-[#f7ffc5] transition-all'>See all Integrations <ArrowRight size={20} /></button>
+        <section className="relative isolate grid grid-cols-1 lg:grid-cols-2 gap-10 rounded-b-3xl overflow-hidden py-10 min-[1400px]:px-24">
+
+            {/* Background pattern image */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-20 bg-no-repeat bg-cover bg-center"
+                style={{
+                    backgroundImage: `url(${assets.integrations_pattern})`,
+                }}
+            />
+
+            {/* Gradient overlay */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10"
+                style={{
+                    background: `
+                        radial-gradient(
+                            ellipse at bottom left,
+                            rgba(255, 120, 70, 0.12),
+                            transparent 50%
+                        ),
+                        radial-gradient(
+                            ellipse at bottom right,
+                            rgba(100, 170, 255, 0.15),
+                            transparent 50%
+                        ),
+                        linear-gradient(
+                            to bottom,
+                            rgba(255, 255, 255, 0.88),
+                            rgba(252, 251, 255, 0.78)
+                        )
+                    `,
+                }}
+            />
+
+            {/* Left content */}
+            <div className="relative flex flex-col gap-5 px-4 text-[#021a41] max-w-xl">
+                <p className="font-semibold">Integrations</p>
+
+                <h2 className="text-4xl font-bold">
+                    Works perfectly with your favorite tools and platforms
+                </h2>
+
+                <p className="text-lg font-medium">
+                    No more jumping between social networks and other solutions.
+                    Use Agorapulse to centralize all of your team's social media
+                    marketing activities.
+                </p>
+
+                <Link to="/integrations" className="w-fit">
+                    <button className="border-[1.5px] border-[#f50] px-5 py-2 text-[#f50] rounded-full font-medium cursor-pointer flex items-center gap-4 hover:bg-[#f7ffc5] transition-all">
+                        See all Integrations
+                        <ArrowRight size={20} />
+                    </button>
                 </Link>
             </div>
 
-            <div className='flex flex-wrap items-center gap-10 overflow-hidden px-4 lg:px-0'>
-                {integrationsImg.map((int, idx) => (
-                    <div key={idx}>
-                        <img src={int.image} alt={int.name} className='w-10 h-10' />
+            {/* Integration logos */}
+            <div className="relative grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 xl:grid-cols-5 gap-8 place-items-center content-center px-4 lg:px-0">
+                {integrationsImg.map((int) => (
+                    <div
+                        key={int.name}
+                        className="flex items-center justify-center"
+                        title={int.name}
+                    >
+                        <img
+                            src={int.image}
+                            alt={int.name}
+                            loading="lazy"
+                            className="w-10 h-10 object-contain"
+                        />
                     </div>
                 ))}
             </div>
-        </div>
+
+        </section>
     )
 }
 
