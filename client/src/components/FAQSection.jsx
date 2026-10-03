@@ -87,7 +87,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className='px-10 [@media(min-width:1400px)]:px-32 py-16 bg-[#fbfbfc] font-sans'>
+    <div className='px-10 [@media(min-width:1400px)]:px-32 py-16 bg-[#fbfbfc]'>
       <div className='max-w-5xl mx-auto'>
         <div className='mb-12'>
           <h3 className='text-4xl text-[#021a41] font-bold tracking-tight'>
