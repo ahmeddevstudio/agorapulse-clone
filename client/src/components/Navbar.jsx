@@ -300,7 +300,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className={`flex gap-4 p-3 rounded-xl transition-all group`}
-                                            onClick={() => setActiveDropdown(null)}
+                                            onClick={() => {setActiveDropdown(null); window.scrollTo({top: 0, left:0, behavior: "smooth"})}}
                                         >
                                             <div className={`shrink-0 p-3 rounded h-fit ${feature.isSpecial ? 'bg-[#f7ffc5] text-[#e05000] group-hover:bg-[#021a41] group-hover:text-[#f7ffc5]' : 'bg-[#f5f5f7] text-[#344563] group-hover:bg-[#ff6726] group-hover:text-white'
                                                 }`}>
@@ -399,7 +399,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className={`flex gap-4 p-3 rounded-xl transition-all group`}
-                                            onClick={() => setActiveDropdown(null)}
+                                            onClick={() => {setActiveDropdown(null); window.scrollTo({top: 0, left:0, behavior: "smooth"})}}
                                         >
                                             <div className={`shrink-0 p-3 rounded h-fit ${feature.isSpecial ? 'bg-[#f7ffc5] text-[#e05000] group-hover:bg-[#021a41] group-hover:text-[#f7ffc5]' : 'bg-[#f5f5f7] text-[#344563] group-hover:bg-[#ff6726] group-hover:text-white'
                                                 }`}>
@@ -479,7 +479,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className={`flex gap-4 p-3 rounded-xl transition-all group`}
-                                            onClick={() => setActiveDropdown(null)}
+                                            onClick={() => {setActiveDropdown(null); window.scrollTo({top: 0, left:0, behavior: "smooth"})}}
                                         >
                                             <div className={`shrink-0 p-3 rounded h-fit ${feature.isSpecial ? 'bg-[#f7ffc5] text-[#e05000] group-hover:bg-[#021a41] group-hover:text-[#f7ffc5]' : 'bg-[#f5f5f7] text-[#344563] group-hover:bg-[#ff6726] group-hover:text-white'
                                                 }`}>
@@ -640,7 +640,10 @@ const Navbar = () => {
                                                 <Link
                                                     key={idx}
                                                     to={feature.to}
-                                                    onClick={() => setSidebarOpen(false)}
+                                                    onClick={() => {
+                                                        setSidebarOpen(false);
+                                                        window.scroll({top: 0, left: 0, behavior: 'smooth'})
+                                                    }}
                                                     className={`flex items-start gap-3 p-3 transition-all ${feature.isSpecial ? 'bg-[#f7ffc5]' : 'border-b border-[#0000001a]'
                                                         }`}
                                                 >
@@ -746,7 +749,10 @@ const Navbar = () => {
                                                 <Link
                                                     key={idx}
                                                     to={feature.to}
-                                                    onClick={() => setSidebarOpen(false)}
+                                                    onClick={() => {
+                                                        setSidebarOpen(false);
+                                                        window.scroll({top: 0, left: 0, behavior: 'smooth'})
+                                                    }}
                                                     className={`flex items-start gap-3 p-3 transition-all ${feature.isSpecial ? 'bg-[#f7ffc5]' : 'border-b border-[#0000001a]'
                                                         }`}
                                                 >
@@ -844,7 +850,10 @@ const Navbar = () => {
                                                 <Link
                                                     key={idx}
                                                     to={feature.to}
-                                                    onClick={() => setSidebarOpen(false)}
+                                                    onClick={() => {
+                                                        setSidebarOpen(false);
+                                                        window.scroll({top: 0, left: 0, behavior: 'smooth'})
+                                                    }}
                                                     className={`flex items-start gap-3 p-3 transition-all ${feature.isSpecial ? 'bg-[#f7ffc5]' : 'border-b border-[#0000001a]'
                                                         }`}
                                                 >
