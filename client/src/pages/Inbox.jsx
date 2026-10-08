@@ -6,6 +6,7 @@ import SocialInteractionsSection from '../components/TopFeatures/SocialInteracti
 import MoreFeaturesSection from '../components/TopFeatures/MoreFeaturesSection'
 import ReviewSection from '../components/TopFeatures/ReviewSection'
 import IntegrationsSection from '../components/IntegrationsSection'
+import FAQSection from '../components/FAQSection'
 
 const Inbox = () => {
   return (
@@ -21,6 +22,8 @@ const Inbox = () => {
         <ReviewSection title={"They love Agorapulse's social inbox"} image1={'https://www.agorapulse.com/assets/hv2-feature-inbox/quote-robbie-alexander.png'} name1={'Robbie Alexander'} role1={'Cole-Dalton Marketing'} desc1={'“Agorapulse has allowed us to monitor all of our social interactions and reviews in one platform, turning a half-hour process into a 5 minute one.”'} image2={'https://www.agorapulse.com/assets/hv2-feature-inbox/quote-isaiah-rappaport.png'} name2={'Isaiah Rappaport'} role2={'Autumn Lake Healthcare'} desc2={'"With Agorapulse, managing 100 profiles is so much more organized and streamlined. The social inbox and listening features put everything in one place, saving me half the time compared to before."'} image3={'https://www.agorapulse.com/assets/hv2-feature-inbox/quote-lacee-tolliver.png'} name3={'Lacee Tolliver'} role3={'Wondercide'} desc3={'“Agorapulse has streamlined moderation in a way that makes my life so much more simple. Instead of visiting multiple websites and double-checking inboxes, Agorapulse has pulled everything into one place.”'}/>
 
         <IntegrationsSection title={'Engage with your customers like a pro'} desc={'Centralize all your social interactions from different networks in one place. Connect your favorite apps and double your productivity all within Agorapulse.'}/>
+
+        <FAQSection />
     </div>
   )
 }
