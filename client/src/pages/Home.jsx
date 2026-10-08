@@ -17,7 +17,7 @@ const Home = () => {
         <SocialMediaManagementSection />
         <Tabs />
         <TourSection />
-        <IntegrationsSection />
+        <IntegrationsSection title={'Works perfectly with your favorite tools and platforms'} desc={"No more jumping between social networks and other solutions. Use Agorapulse to centralize all of your team's social media marketing activities."}/>
         <ReviewSection />
         <FAQSection />
         <CTASection />

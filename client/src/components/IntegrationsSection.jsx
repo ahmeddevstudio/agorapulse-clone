@@ -1,10 +1,9 @@
-
 import React from 'react'
 import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-const IntegrationsSection = () => {
+const IntegrationsSection = ({title, desc}) => {
     const integrationsImg = [
         {
             name: "Facebook",
@@ -119,13 +118,11 @@ const IntegrationsSection = () => {
                 <p className="font-semibold">Integrations</p>
 
                 <h2 className="text-4xl font-bold">
-                    Works perfectly with your favorite tools and platforms
+                    {title}
                 </h2>
 
                 <p className="text-lg font-medium">
-                    No more jumping between social networks and other solutions.
-                    Use Agorapulse to centralize all of your team's social media
-                    marketing activities.
+                    {desc}
                 </p>
 
                 <Link to="/integrations" className="w-fit">

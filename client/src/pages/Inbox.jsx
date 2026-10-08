@@ -5,6 +5,7 @@ import { Funnel, ImagePlay, InboxIcon, NotepadText, Settings, SlidersHorizontal,
 import SocialInteractionsSection from '../components/TopFeatures/SocialInteractionsSection'
 import MoreFeaturesSection from '../components/TopFeatures/MoreFeaturesSection'
 import ReviewSection from '../components/TopFeatures/ReviewSection'
+import IntegrationsSection from '../components/IntegrationsSection'
 
 const Inbox = () => {
   return (
@@ -18,6 +19,8 @@ const Inbox = () => {
         <MoreFeaturesSection title={'More features to manage your social inbox'} PMBgColor={'#fff9f4'} LightBgColor={'#fff9f4'} PMTextColor={'#ff6726'} BgImage={'https://www.agorapulse.com/assets/hv2-feature-inbox/blur.png'} icon1={<Funnel size={30} color='#ff6726' fill='#ff6726'/>} title1={'Inbox filters'} desc1={'Easily locate particular messages by utilizing the various filtering options available, such as item type, date range, label applied, or action performed.'} icon2={<SlidersHorizontal size={30} color='#ff6726'/>} title2={'View comments by post'} desc2={'Increase productivity by assigning moderation to specific threads, moderating individual posts with just a few clicks, and monitoring ad comments and posts.'} icon3={<ImagePlay size={30} color='#ff6726'/>} title3={'Tenor integration'} desc3={"Search, choose, and send your client or brand's favorite GIFs when replying to your Facebook and X(Twitter) interactions."} icon4={<InboxIcon size={30} color='#ff6726'/>} title4={'Inbox bulk actions'} desc4={'Easily hide, delete, label, assign, and review all of your social conversations in bulk.'} icon5={<Settings size={30} color='#ff6726'/>} title5={'Salesforce & Hubspot integration'} desc5={'Connect Salesforce or HubSpot CRM to easily add contacts from your social interactions.'} icon6={<Sparkles size={30} color='#ff6726'/>} title6={'Reply Suggestions'} desc6={'AI-powered private message replies that adapt based on your latest replies.'}/>
 
         <ReviewSection title={"They love Agorapulse's social inbox"} image1={'https://www.agorapulse.com/assets/hv2-feature-inbox/quote-robbie-alexander.png'} name1={'Robbie Alexander'} role1={'Cole-Dalton Marketing'} desc1={'“Agorapulse has allowed us to monitor all of our social interactions and reviews in one platform, turning a half-hour process into a 5 minute one.”'} image2={'https://www.agorapulse.com/assets/hv2-feature-inbox/quote-isaiah-rappaport.png'} name2={'Isaiah Rappaport'} role2={'Autumn Lake Healthcare'} desc2={'"With Agorapulse, managing 100 profiles is so much more organized and streamlined. The social inbox and listening features put everything in one place, saving me half the time compared to before."'} image3={'https://www.agorapulse.com/assets/hv2-feature-inbox/quote-lacee-tolliver.png'} name3={'Lacee Tolliver'} role3={'Wondercide'} desc3={'“Agorapulse has streamlined moderation in a way that makes my life so much more simple. Instead of visiting multiple websites and double-checking inboxes, Agorapulse has pulled everything into one place.”'}/>
+
+        <IntegrationsSection title={'Engage with your customers like a pro'} desc={'Centralize all your social interactions from different networks in one place. Connect your favorite apps and double your productivity all within Agorapulse.'}/>
     </div>
   )
 }
