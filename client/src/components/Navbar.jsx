@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
-import { ArrowRight, BookOpenText, Boxes, BriefcaseBusiness, Building, Calendar, ChevronDown, FileChartColumnIncreasing, GraduationCap, Inbox, Laptop, Link2, Megaphone, Menu, Pencil, Play, RadioTower, School, Search, Send, Settings, Sparkles, SquareText, TrendingUp, UsersRound, UserStar, X } from 'lucide-react'
+import { ArrowRight, BookOpenText, Boxes, BriefcaseBusiness, Building, Calendar, ChevronDown, FileChartColumnIncreasing, GraduationCap, Inbox, Laptop, Link2, Megaphone, Menu, MoveRight, Pencil, Play, RadioTower, School, Search, Send, Settings, Sparkles, SquareText, TrendingUp, UsersRound, UserStar, X } from 'lucide-react'
 
 const Navbar = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -300,7 +300,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className={`flex gap-4 p-3 rounded-xl transition-all group`}
-                                            onClick={() => {setActiveDropdown(null); window.scrollTo({top: 0, left:0, behavior: "smooth"})}}
+                                            onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}
                                         >
                                             <div className={`shrink-0 p-3 rounded h-fit ${feature.isSpecial ? 'bg-[#f7ffc5] text-[#e05000] group-hover:bg-[#021a41] group-hover:text-[#f7ffc5]' : 'bg-[#f5f5f7] text-[#344563] group-hover:bg-[#ff6726] group-hover:text-white'
                                                 }`}>
@@ -309,8 +309,9 @@ const Navbar = () => {
 
                                             <div>
                                                 <div className='flex items-center gap-2'>
-                                                    <h4 className='font-semibold text-[#212e44] group-hover:text-[#ff6726]'>
+                                                    <h4 className='font-semibold text-[#212e44] group-hover:text-[#ff6726] flex gap-4 items-center'>
                                                         {feature.title}
+                                                        <MoveRight size={16} strokeWidth={2.5} className={`hidden ${feature.isSpecial ? 'hidden' : 'group-hover:block'}`} />
                                                     </h4>
 
                                                     {feature.badge && (
@@ -399,7 +400,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className={`flex gap-4 p-3 rounded-xl transition-all group`}
-                                            onClick={() => {setActiveDropdown(null); window.scrollTo({top: 0, left:0, behavior: "smooth"})}}
+                                            onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}
                                         >
                                             <div className={`shrink-0 p-3 rounded h-fit ${feature.isSpecial ? 'bg-[#f7ffc5] text-[#e05000] group-hover:bg-[#021a41] group-hover:text-[#f7ffc5]' : 'bg-[#f5f5f7] text-[#344563] group-hover:bg-[#ff6726] group-hover:text-white'
                                                 }`}>
@@ -408,8 +409,9 @@ const Navbar = () => {
 
                                             <div>
                                                 <div className='flex items-center gap-2'>
-                                                    <h4 className='font-semibold text-[#212e44] group-hover:text-[#ff6726]'>
+                                                    <h4 className='font-semibold text-[#212e44] group-hover:text-[#ff6726] flex gap-4 items-center'>
                                                         {feature.title}
+                                                        <MoveRight size={16} strokeWidth={2.5} className={`hidden ${feature.isSpecial ? 'hidden' : 'group-hover:block'}`} />
                                                     </h4>
 
                                                     {feature.badge && (
@@ -479,7 +481,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className={`flex gap-4 p-3 rounded-xl transition-all group`}
-                                            onClick={() => {setActiveDropdown(null); window.scrollTo({top: 0, left:0, behavior: "smooth"})}}
+                                            onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}
                                         >
                                             <div className={`shrink-0 p-3 rounded h-fit ${feature.isSpecial ? 'bg-[#f7ffc5] text-[#e05000] group-hover:bg-[#021a41] group-hover:text-[#f7ffc5]' : 'bg-[#f5f5f7] text-[#344563] group-hover:bg-[#ff6726] group-hover:text-white'
                                                 }`}>
@@ -488,8 +490,9 @@ const Navbar = () => {
 
                                             <div>
                                                 <div className='flex items-center gap-2'>
-                                                    <h4 className='font-semibold text-[#212e44] group-hover:text-[#ff6726]'>
+                                                    <h4 className='font-semibold text-[#212e44] group-hover:text-[#ff6726] flex gap-4 items-center'>
                                                         {feature.title}
+                                                        <MoveRight size={16} strokeWidth={2.5} className={`hidden ${feature.isSpecial ? 'hidden' : 'group-hover:block'}`}/>
                                                     </h4>
 
                                                     {feature.badge && (
@@ -642,7 +645,7 @@ const Navbar = () => {
                                                     to={feature.to}
                                                     onClick={() => {
                                                         setSidebarOpen(false);
-                                                        window.scroll({top: 0, left: 0, behavior: 'smooth'})
+                                                        window.scroll({ top: 0, left: 0, behavior: 'smooth' })
                                                     }}
                                                     className={`flex items-start gap-3 p-3 transition-all ${feature.isSpecial ? 'bg-[#f7ffc5]' : 'border-b border-[#0000001a]'
                                                         }`}
@@ -751,7 +754,7 @@ const Navbar = () => {
                                                     to={feature.to}
                                                     onClick={() => {
                                                         setSidebarOpen(false);
-                                                        window.scroll({top: 0, left: 0, behavior: 'smooth'})
+                                                        window.scroll({ top: 0, left: 0, behavior: 'smooth' })
                                                     }}
                                                     className={`flex items-start gap-3 p-3 transition-all ${feature.isSpecial ? 'bg-[#f7ffc5]' : 'border-b border-[#0000001a]'
                                                         }`}
@@ -852,7 +855,7 @@ const Navbar = () => {
                                                     to={feature.to}
                                                     onClick={() => {
                                                         setSidebarOpen(false);
-                                                        window.scroll({top: 0, left: 0, behavior: 'smooth'})
+                                                        window.scroll({ top: 0, left: 0, behavior: 'smooth' })
                                                     }}
                                                     className={`flex items-start gap-3 p-3 transition-all ${feature.isSpecial ? 'bg-[#f7ffc5]' : 'border-b border-[#0000001a]'
                                                         }`}

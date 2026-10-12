@@ -26,7 +26,7 @@ const Card = ({title, icon1, icon2, icon3, desc1, desc2, desc3, PMColor, BgColor
         <div className='pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
             {cards.map((card, idx)=>(
                 <div key={idx} className={`bg-white p-8 flex flex-col items-center h-50 justify-between rounded-2xl`} style={{'boxShadow': `0 19px 40px 0 ${shadowColor}`}}>
-                    <p className={`text-[${PMColor}] p-2 rounded-xl`} style={{'backgroundColor': `${BgColor}`}}>{card.Icon}</p>
+                    <p className={`p-2 rounded-xl`} style={{'backgroundColor': `${BgColor}`, 'color': `${PMColor}`}}>{card.Icon}</p>
                     <p className='text-center'>{card.desc}</p>
                 </div>
             ))}

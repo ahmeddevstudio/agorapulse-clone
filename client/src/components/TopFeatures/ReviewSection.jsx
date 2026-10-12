@@ -31,7 +31,7 @@ const ReviewSection = ({ title, image1, name1, role1, desc1, image2, name2, role
 
             <div className='pt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {reviews.map((review, idx) => (
-                    <div key={idx} className='border p-5 h-63 shadow-xs border-[#858fa133] rounded-2xl flex flex-col items-center'>
+                    <div key={idx} className='border p-5 shadow-xs border-[#858fa133] rounded-2xl flex flex-col items-center'>
                         <div className='flex items-center gap-3'>
                             <img src={review.image} alt={review.name} className='size-14' />
                             <div className='text-[#212e44]'>

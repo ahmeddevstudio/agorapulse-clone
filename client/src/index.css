@@ -2,11 +2,11 @@
 
 @import "tailwindcss";
 
-* {
+body {
     font-family: 'Cabin', sans-serif;
 }
 
-.nunito-sans{
+.nunito-sans {
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -19,6 +19,10 @@
             #f7ffc5 32.7%,
             rgba(247, 255, 197, 0) 100%),
         #fff;
+}
+
+@utility bg-trustSection-gradient {
+    background: radial-gradient(32% 40% at 102% 100%, rgba(74, 21, 48, .55) 0, rgba(74, 21, 48, 0) 100%), radial-gradient(54.91% 98.09% at 88.85% 55.91%, #ff3c00 0, rgba(255, 60, 0, 0) 100%), radial-gradient(84.43% 77.52% at -3.63% 92.33%, #ff2a00 0, rgba(255, 42, 0, 0) 100%), radial-gradient(64.3% 35.59% at 74.08% 89.21%, #0a1b33 0, rgba(10, 27, 51, 0) 100%), radial-gradient(105.59% 100.94% at 100% 9.76%, #ff6b1a 0, rgba(255, 107, 26, 0) 100%), radial-gradient(113.47% 105.24% at 30.81% 13.01%, #f7ffc5 42.79%, rgba(247, 255, 197, 0) 100%), radial-gradient(21.14% 27.11% at 9.96% 2.78%, #fff 0, hsla(0, 0%, 100%, 0) 100%)
 }
 
 @theme {

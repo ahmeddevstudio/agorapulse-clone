@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 
-const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgImage, icon1, title1, desc1, icon2, title2, desc2, icon3, title3, desc3, icon4, title4, desc4, icon5, title5, desc5, icon6, title6, desc6 }) => {
+const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgImage, icon1, title1, desc1, icon2, title2, desc2, icon3, title3, desc3, icon4, title4, desc4, icon5, title5, desc5, icon6, title6, desc6, icon7, title7, desc7, icon8, title8, desc8, icon9, title9, desc9 }) => {
 
     const features = [
         { Icon: icon1, title: title1, desc: desc1 },
@@ -10,6 +10,9 @@ const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgIm
         { Icon: icon4, title: title4, desc: desc4 },
         { Icon: icon5, title: title5, desc: desc5 },
         { Icon: icon6, title: title6, desc: desc6 },
+        { Icon: icon7, title: title7, desc: desc7 },
+        { Icon: icon8, title: title8, desc: desc8 },
+        { Icon: icon9, title: title9, desc: desc9 },
     ]
 
     return (

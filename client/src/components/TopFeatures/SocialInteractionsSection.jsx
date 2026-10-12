@@ -40,15 +40,15 @@ const SocialInteractionsSection = ({ title, threeDIcon1, title1, desc1, image1, 
                             <div
                                 key={index}
                                 onMouseEnter={() => setActiveIndex(index)}
-                                className={`py-6 px-3 rounded transition-all duration-300 cursor-pointer flex gap-4 items-start ${isActive ? `bg-[${hoverBgColor}]` : 'bg-[#f9f9fa]'
-                                    }`}
-                            >
+                                className='py-6 px-3 rounded transition-all duration-300 cursor-pointer flex gap-4 items-start' style={{background: isActive ? hoverBgColor : '#f9f9fa'}}>
                                 <div className='shrink-0'>
-                                    <img src={item.threeDIcon} alt="" className='h-14 w-16'/>
+                                    <img src={item.threeDIcon} alt="" className='h-14 w-16' />
                                 </div>
                                 <div>
-                                    <h3 className={`text-xl font-bold mb-2 transition-colors ${isActive ? `text-[${hoverTextColor}]` : 'text-[#212e44]'
-                                        }`}>
+                                    <h3
+                                        style={{ color: isActive ? hoverTextColor : '#212e44' }}
+                                        className="text-xl font-bold mb-2 transition-colors"
+                                    >
                                         {item.title}
                                     </h3>
                                     <p className='text-[#212e44cc] leading-relaxed'>
