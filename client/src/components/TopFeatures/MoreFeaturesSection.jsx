@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
 
-const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgImage, icon1, title1, desc1, icon2, title2, desc2, icon3, title3, desc3, icon4, title4, desc4, icon5, title5, desc5, icon6, title6, desc6, icon7, title7, desc7, icon8, title8, desc8, icon9, title9, desc9 }) => {
+const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgImage, icon1, title1, desc1, icon2, title2, desc2, icon3, title3, desc3, icon4, title4, desc4, icon5, title5, desc5, icon6, title6, desc6, icon7, title7, desc7, icon8, title8, desc8, icon9, title9, desc9, grid2 }) => {
 
     const features = [
         { Icon: icon1, title: title1, desc: desc1 },
@@ -22,7 +22,7 @@ const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgIm
             </div>
 
             <div
-                className="pt-10 pb-28 px-4 [@media(min-width:1400px)]:px-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 rounded-b-3xl"
+                className={`pt-10 pb-28 px-4 [@media(min-width:1400px)]:px-24 grid grid-cols-1 md:grid-cols-2 ${grid2 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'} gap-10 rounded-b-3xl`}
                 style={{
                     backgroundColor: PMBgColor,
                     backgroundImage: `url(${assets?.integrations_pattern || ''}), url(${BgImage || ''})`,

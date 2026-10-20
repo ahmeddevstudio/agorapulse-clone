@@ -43,7 +43,7 @@ const Hero = ({ title, PMText, PMColor, desc, image }) => {
         <div className='nunito-sans px-4 [@media(min-width:1400px)]:px-24 py-15 grid grid-cols-1 lg:grid-cols-2 gap-10'>
             <div className='flex flex-col items-center lg:items-start'>
                 <div className='text-[#212e44] text-center lg:text-left'>
-                    <h1 className='text-5xl lg:text-6xl font-black [-webkit-text-stroke:2px]'>{title} <span style={{ 'color': `${PMColor}` }}>{PMText}</span></h1>
+                    <h1 className='text-4xl lg:text-6xl font-black [-webkit-text-stroke:2px]'>{title} <span style={{ 'color': `${PMColor}` }}>{PMText}</span></h1>
                     <p className='pt-5 text-lg'>{desc}</p>
                 </div>
 

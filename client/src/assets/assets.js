@@ -9,6 +9,7 @@ import publishing_tab from './publishing-tab.webp'
 import listing_tab from './listing-tab.webp'
 import blur_img from './blur.avif'
 import integrations_pattern from './integrations-pattern.png'
+import threed_image_1 from './3d-image-1.png'
 
 export const assets = {
     agorapulse_logo,
@@ -21,5 +22,6 @@ export const assets = {
     publishing_tab,
     listing_tab,
     blur_img,
-    integrations_pattern
+    integrations_pattern,
+    threed_image_1
 }

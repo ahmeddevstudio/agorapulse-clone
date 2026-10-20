@@ -38,3 +38,7 @@ body {
         }
     }
 }
+
+@theme {
+  --font-weight-superbold: 1000;
+}

@@ -9,6 +9,12 @@ import ReturnOnInvestment from './pages/ReturnOnInvestment'
 import Reporting from './pages/Reporting'
 import Archie from './pages/Archie'
 import Listening from './pages/Listening'
+import Agencies from './pages/Agencies'
+import ElectronicCommerce from './pages/ElectronicCommerce'
+import B2B from './pages/B2B'
+import Manufacturing from './pages/Manufacturing'
+import Retail from './pages/Retail'
+import HigherEducation from './pages/HigherEducation'
 
 const App = () => {
   return (
@@ -22,6 +28,12 @@ const App = () => {
         <Route path='/reporting' element={<Reporting />}/>
         <Route path='/archie' element={<Archie />}/>
         <Route path='/listening' element={<Listening />}/>
+        <Route path='/agencies' element={<Agencies />}/>
+        <Route path='/e-commerce' element={<ElectronicCommerce />}/>
+        <Route path='/b2b' element={<B2B />}/>
+        <Route path='/manufacturing' element={<Manufacturing />}/>
+        <Route path='/retail' element={<Retail />}/>
+        <Route path='/higher-education' element={<HigherEducation />}/>
       </Routes>
       <Footer />
     </div>
