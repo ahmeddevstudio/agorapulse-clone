@@ -15,6 +15,7 @@ import B2B from './pages/B2B'
 import Manufacturing from './pages/Manufacturing'
 import Retail from './pages/Retail'
 import HigherEducation from './pages/HigherEducation'
+import Pricing from './pages/Pricing'
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/manufacturing' element={<Manufacturing />}/>
         <Route path='/retail' element={<Retail />}/>
         <Route path='/higher-education' element={<HigherEducation />}/>
+        <Route path='/pricing' element={<Pricing />}/>
       </Routes>
       <Footer />
     </div>
