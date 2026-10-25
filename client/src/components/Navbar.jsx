@@ -161,7 +161,7 @@ const Navbar = () => {
                 Icon: SquareText,
                 title: 'Blog',
                 desc: 'Insights, trends, and winning strategies',
-                to: '/blog',
+                to: '/events',
             },
             {
                 Icon: Pencil,
@@ -193,19 +193,19 @@ const Navbar = () => {
                 Icon: Search,
                 title: 'Case Studies',
                 desc: 'Loved by marketers and agencies worldwide',
-                to: '/case-studies',
+                to: '/resources',
             },
             {
                 Icon: UserStar,
                 title: 'Help Center',
                 desc: 'Get answers about using Agorapulse',
-                to: '/help-center',
+                to: '/contact',
             },
             {
                 Icon: Play,
                 title: 'Video Tutorials',
                 desc: 'Get Answers about using agorapulse',
-                to: '/video-tutorial',
+                to: '/resources',
             },
         ],
 

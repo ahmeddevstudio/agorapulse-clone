@@ -16,6 +16,10 @@ import Manufacturing from './pages/Manufacturing'
 import Retail from './pages/Retail'
 import HigherEducation from './pages/HigherEducation'
 import Pricing from './pages/Pricing'
+import FreeTools from './pages/FreeTools'
+import Resources from './pages/Resources'
+import Academy from './pages/Academy'
+import Events from './pages/Events'
 
 const App = () => {
   return (
@@ -36,6 +40,10 @@ const App = () => {
         <Route path='/retail' element={<Retail />}/>
         <Route path='/higher-education' element={<HigherEducation />}/>
         <Route path='/pricing' element={<Pricing />}/>
+        <Route path='/free-tools' element={<FreeTools />}/>
+        <Route path='/resources' element={<Resources />}/>
+        <Route path='/academy' element={<Academy />}/>
+        <Route path='/events' element={<Events />}/>
       </Routes>
       <Footer />
     </div>
