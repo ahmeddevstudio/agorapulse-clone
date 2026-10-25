@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     return (
@@ -11,15 +12,19 @@ const Hero = () => {
                 <p className='text-lg font-semibold text-[#021a41]'>Save time, stay organized, and easily manage your social media with Agorapulse. Measure and drive real business impact from your social campaigns-all in one platform.</p>
 
                 <div className='flex flex-col sm:flex-row gap-4'>
-                    <button className='flex items-center gap-3 px-4 py-2 border-[1.5px] border-[#f50] rounded-3xl text-[#f50] font-semibold cursor-pointer hover:bg-[#f7ffc5] transition-all justify-center'>
-                        Try for free now
-                        <ArrowRight size={18} />
-                    </button>
+                    <Link to={'/signup'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                        <button className='flex items-center gap-3 px-4 py-2 border-[1.5px] border-[#f50] rounded-3xl text-[#f50] font-semibold cursor-pointer hover:bg-[#f7ffc5] transition-all justify-center'>
+                            Try for free now
+                            <ArrowRight size={18} />
+                        </button>
+                    </Link>
 
-                    <button className='flex items-center gap-3 px-4 py-2 bg-[#f50] rounded-3xl text-white font-semibold hover:bg-[#f7ffc5] hover:text-black border-[1.5px] transition-all cursor-pointer justify-center'>
-                        Take a tour
-                        <ArrowRight size={18} />
-                    </button>
+                    <Link to={'/tour'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                        <button className='flex items-center gap-3 px-4 py-2 bg-[#f50] rounded-3xl text-white font-semibold hover:bg-[#f7ffc5] hover:text-black border-[1.5px] transition-all cursor-pointer justify-center'>
+                            Take a tour
+                            <ArrowRight size={18} />
+                        </button>
+                    </Link>
                 </div>
 
                 <p className='text-xs text-[#021a41] text-center sm:text-left'>Free for 30 days - No card required</p>

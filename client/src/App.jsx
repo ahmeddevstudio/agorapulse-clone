@@ -20,6 +20,7 @@ import FreeTools from './pages/FreeTools'
 import Resources from './pages/Resources'
 import Academy from './pages/Academy'
 import Events from './pages/Events'
+import AgoraPulseAI from './pages/AgoraPulseAI'
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
         <Route path='/resources' element={<Resources />}/>
         <Route path='/academy' element={<Academy />}/>
         <Route path='/events' element={<Events />}/>
+        <Route path='/agorapulse-ai' element={<AgoraPulseAI />}/>
       </Routes>
       <Footer />
     </div>

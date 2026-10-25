@@ -69,13 +69,13 @@ const Navbar = () => {
                 Icon: Link2,
                 title: 'PulseLink in Bio',
                 desc: 'Link in bio tool from Agorapulse',
-                to: '/link-in-bio',
+                to: '/archie',
             },
             {
                 Icon: Megaphone,
                 title: 'Advocacy',
                 desc: 'Amplify your message to boost reach',
-                to: '/advocacy',
+                to: '/inbox',
             },
         ],
 
@@ -271,20 +271,26 @@ const Navbar = () => {
                 </div>
 
                 <div className='flex items-center gap-6'>
-                    <button className='text-[#344563] font-semibold text-[14px] cursor-pointer hover:text-[#f50] transition-colors'>
-                        Log In
-                    </button>
+                    <Link to={'/log-in'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                        <button className='text-[#344563] font-semibold text-[14px] cursor-pointer hover:text-[#f50] transition-colors'>
+                            Log In
+                        </button>
+                    </Link>
 
                     <div className='flex gap-3'>
-                        <button className='flex items-center gap-2 px-5 py-2.5 border-[1.5px] border-[#f50] rounded-3xl text-[#f50] font-semibold text-[14px] cursor-pointer hover:bg-[#f7ffc5] transition-all'>
-                            Try for free
-                            <ArrowRight size={16} />
-                        </button>
+                        <Link to={'/signup'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                            <button className='flex items-center gap-2 px-5 py-2.5 border-[1.5px] border-[#f50] rounded-3xl text-[#f50] font-semibold text-[14px] cursor-pointer hover:bg-[#f7ffc5] transition-all'>
+                                Try for free
+                                <ArrowRight size={16} />
+                            </button>
+                        </Link>
 
-                        <button className='flex items-center gap-2 px-5 py-2.5 bg-[#f50] rounded-3xl text-[14px] text-white font-semibold hover:bg-[#f7ffc5] hover:text-black border-[1.5px] transition-all cursor-pointer'>
-                            Schedule a demo
-                            <ArrowRight size={16} />
-                        </button>
+                        <Link to={'/demo'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                            <button className='flex items-center gap-2 px-5 py-2.5 bg-[#f50] rounded-3xl text-[14px] text-white font-semibold hover:bg-[#f7ffc5] hover:text-black border-[1.5px] transition-all cursor-pointer'>
+                                Schedule a demo
+                                <ArrowRight size={16} />
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -344,7 +350,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className='flex items-center gap-4 group'
-                                            onClick={() => setActiveDropdown(null)}
+                                            onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}
                                         >
                                             <div className='shrink-0 text-gray-400 mt-0.5 group-hover:text-[#f50] transition-colors'>
                                                 <Icon size={16} strokeWidth={2} />
@@ -379,7 +385,7 @@ const Navbar = () => {
                             <Link
                                 to={topFeatureNav.promo.to}
                                 className='text-[14px] font-bold text-white underline hover:opacity-75 transition-colors inline-block'
-                                onClick={() => setActiveDropdown(null)}
+                                onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}
                             >
                                 {topFeatureNav.promo.linkText}
                             </Link>
@@ -454,7 +460,7 @@ const Navbar = () => {
                             </div>
 
                             <div className='pt-10'>
-                                <Link to={'integrations'} onClick={() => setActiveDropdown(null)}>
+                                <Link to={'integrations'} onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}>
                                     <button className='flex items-center text-[#ff6726] cursor-pointer font-semibold gap-2 hover:font-bold'>See all integrations <ArrowRight size={20} /></button>
                                 </Link>
 
@@ -492,7 +498,7 @@ const Navbar = () => {
                                                 <div className='flex items-center gap-2'>
                                                     <h4 className='font-semibold text-[#212e44] group-hover:text-[#ff6726] flex gap-4 items-center'>
                                                         {feature.title}
-                                                        <MoveRight size={16} strokeWidth={2.5} className={`hidden ${feature.isSpecial ? 'hidden' : 'group-hover:block'}`}/>
+                                                        <MoveRight size={16} strokeWidth={2.5} className={`hidden ${feature.isSpecial ? 'hidden' : 'group-hover:block'}`} />
                                                     </h4>
 
                                                     {feature.badge && (
@@ -525,7 +531,7 @@ const Navbar = () => {
                                             key={idx}
                                             to={feature.to}
                                             className='flex items-center gap-4 group'
-                                            onClick={() => setActiveDropdown(null)}
+                                            onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}
                                         >
                                             <div className='shrink-0 text-gray-400 mt-0.5 group-hover:text-[#f50] transition-colors'>
                                                 <Icon size={16} strokeWidth={2} />
@@ -560,7 +566,7 @@ const Navbar = () => {
                             <Link
                                 to={resourcesNav.promo.to}
                                 className='text-[14px] font-bold text-white underline hover:opacity-75 transition-colors inline-block'
-                                onClick={() => setActiveDropdown(null)}
+                                onClick={() => { setActiveDropdown(null); window.scrollTo({ top: 0, left: 0, behavior: "smooth" }) }}
                             >
                                 {resourcesNav.promo.linkText}
                             </Link>
@@ -686,7 +692,10 @@ const Navbar = () => {
                                                     <Link
                                                         key={idx}
                                                         to={feature.to}
-                                                        onClick={() => setSidebarOpen(false)}
+                                                        onClick={() => {
+                                                            setSidebarOpen(false);
+                                                            window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                                        }}
                                                         className='flex items-start gap-3 text-[#212e44]'
                                                     >
                                                         <Icon size={18} strokeWidth={2} className='shrink-0 text-gray-400 mt-0.5' />
@@ -718,7 +727,10 @@ const Navbar = () => {
                                         </p>
                                         <Link
                                             to={topFeatureNav.promo.to}
-                                            onClick={() => setSidebarOpen(false)}
+                                            onClick={() => {
+                                                setSidebarOpen(false);
+                                                window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                            }}
                                             className='text-[13px] font-bold text-white underline hover:opacity-80 inline-block'
                                         >
                                             {topFeatureNav.promo.linkText}
@@ -807,7 +819,10 @@ const Navbar = () => {
                                         </div>
 
                                         <div className='pt-10'>
-                                            <Link to={'intregrations'} onClick={() => setSidebarOpen(false)}>
+                                            <Link to={'intregrations'} onClick={() => {
+                                                setSidebarOpen(false);
+                                                window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                            }}>
                                                 <button className='flex items-center gap-2 text-[#ff6726]'>See all Intregrations <ArrowRight size={18} /></button>
                                             </Link>
 
@@ -824,7 +839,10 @@ const Navbar = () => {
                         </li>
 
                         <li className='py-4 border-b border-gray-100'>
-                            <Link to='/pricing' onClick={() => setSidebarOpen(false)}>
+                            <Link to='/pricing' onClick={() => {
+                                setSidebarOpen(false);
+                                window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                            }}>
                                 Pricing
                             </Link>
                         </li>
@@ -896,7 +914,10 @@ const Navbar = () => {
                                                     <Link
                                                         key={idx}
                                                         to={feature.to}
-                                                        onClick={() => setSidebarOpen(false)}
+                                                        onClick={() => {
+                                                            setSidebarOpen(false);
+                                                            window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                                        }}
                                                         className='flex items-start gap-3 text-[#212e44]'
                                                     >
                                                         <Icon size={18} strokeWidth={2} className='shrink-0 text-gray-400 mt-0.5' />
@@ -928,7 +949,10 @@ const Navbar = () => {
                                         </p>
                                         <Link
                                             to={resourcesNav.promo.to}
-                                            onClick={() => setSidebarOpen(false)}
+                                            onClick={() => {
+                                                setSidebarOpen(false);
+                                                window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                            }}
                                             className='text-[13px] font-bold text-white underline hover:opacity-80 inline-block'
                                         >
                                             {resourcesNav.promo.linkText}
@@ -940,28 +964,43 @@ const Navbar = () => {
                     </ul>
 
                     <div className='flex flex-col gap-3 mt-8 pb-8'>
-                        <button
-                            onClick={() => setSidebarOpen(false)}
-                            className='w-full py-3 text-[#344563] font-semibold border border-gray-200 rounded-3xl cursor-pointer'
-                        >
-                            Log In
-                        </button>
+                        <Link to={'/log-in'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                            <button
+                                onClick={() => {
+                                    setSidebarOpen(false);
+                                    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                }}
+                                className='w-full py-3 text-[#344563] font-semibold border border-gray-200 rounded-3xl cursor-pointer'
+                            >
+                                Log In
+                            </button>
+                        </Link>
 
-                        <button
-                            onClick={() => setSidebarOpen(false)}
-                            className='w-full flex justify-center items-center gap-2 px-4 py-3 border-[1.5px] border-[#f50] rounded-3xl text-[#f50] font-semibold cursor-pointer hover:bg-[#fff5f0] transition-all'
-                        >
-                            Try for free
-                            <ArrowRight size={18} />
-                        </button>
+                        <Link to={'/signup'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                            <button
+                                onClick={() => {
+                                    setSidebarOpen(false);
+                                    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                }}
+                                className='w-full flex justify-center items-center gap-2 px-4 py-3 border-[1.5px] border-[#f50] rounded-3xl text-[#f50] font-semibold cursor-pointer hover:bg-[#fff5f0] transition-all'
+                            >
+                                Try for free
+                                <ArrowRight size={18} />
+                            </button>
+                        </Link>
 
-                        <button
-                            onClick={() => setSidebarOpen(false)}
-                            className='w-full flex justify-center items-center gap-2 px-4 py-3 bg-[#f50] rounded-3xl text-white font-semibold cursor-pointer hover:bg-[#e04a00] transition-all'
-                        >
-                            Schedule a demo
-                            <ArrowRight size={18} />
-                        </button>
+                        <Link to={'/demo'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                            <button
+                                onClick={() => {
+                                    setSidebarOpen(false);
+                                    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+                                }}
+                                className='w-full flex justify-center items-center gap-2 px-4 py-3 bg-[#f50] rounded-3xl text-white font-semibold cursor-pointer hover:bg-[#e04a00] transition-all'
+                            >
+                                Schedule a demo
+                                <ArrowRight size={18} />
+                            </button>
+                        </Link>
                     </div>
                 </nav>
             </div>

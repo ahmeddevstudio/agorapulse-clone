@@ -40,5 +40,24 @@ body {
 }
 
 @theme {
-  --font-weight-superbold: 1000;
+    --font-weight-superbold: 1000;
+}
+
+@utility gradient-text {
+    background: linear-gradient(90deg, #578fff, #df52ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@utility gradient-border{
+    background: linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,#578fff,#df52ff) border-box;
+    border: 1px solid transparent;
+}
+
+@utility gradient-bg-btn{
+    background: linear-gradient(90deg,#578fff,#df52ff),linear-gradient(90deg,#578fff,#df52ff);
+}
+
+@utility gradient-bg-btn-hover{
+    background: white;
 }
