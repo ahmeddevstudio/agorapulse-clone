@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import Inbox from './pages/Inbox'
@@ -21,11 +21,16 @@ import Resources from './pages/Resources'
 import Academy from './pages/Academy'
 import Events from './pages/Events'
 import AgoraPulseAI from './pages/AgoraPulseAI'
+import Signup from './pages/Signup'
+import LogIn from './pages/LogIn'
 
 const App = () => {
+
+  const location = useLocation();
+
   return (
     <div>
-      <Navbar />
+      {location.pathname !== '/signup' && location.pathname !== '/log-in' && <Navbar />}
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/inbox' element={<Inbox />}/>
@@ -46,8 +51,11 @@ const App = () => {
         <Route path='/academy' element={<Academy />}/>
         <Route path='/events' element={<Events />}/>
         <Route path='/agorapulse-ai' element={<AgoraPulseAI />}/>
+        <Route path='/signup' element={<Signup />}/>
+        <Route path='/log-in' element={<LogIn />}/>
       </Routes>
-      <Footer />
+      
+      {location.pathname !== '/signup' && location.pathname !== '/log-in' && <Footer />}
     </div>
   )
 }
