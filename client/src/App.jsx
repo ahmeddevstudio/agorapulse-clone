@@ -23,6 +23,8 @@ import Events from './pages/Events'
 import AgoraPulseAI from './pages/AgoraPulseAI'
 import Signup from './pages/Signup'
 import LogIn from './pages/LogIn'
+import Demo from './pages/Demo'
+import Tour from './pages/Tour'
 
 const App = () => {
 
@@ -53,6 +55,8 @@ const App = () => {
         <Route path='/agorapulse-ai' element={<AgoraPulseAI />}/>
         <Route path='/signup' element={<Signup />}/>
         <Route path='/log-in' element={<LogIn />}/>
+        <Route path='/demo' element={<Demo />}/>
+        <Route path='/tour' element={<Tour />}/>
       </Routes>
       
       {location.pathname !== '/signup' && location.pathname !== '/log-in' && <Footer />}
