@@ -13,14 +13,14 @@ const Hero = () => {
                 <p className='text-[#021a41]'>Archie repurposes your webinars, videos, articles, and documents into on-brand, platform-native posts. It starts from your strategy and voice, not a blank prompt, so the output already sounds like you.</p>
 
                 <div className='flex flex-col sm:flex-row gap-4'>
-                    <Link to={'/signup'}>
+                    <Link to={'/signup'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                         <button className='flex items-center gap-3 px-4 py-2 border-[1.5px] border-[#f50] rounded-lg text-[#f50] font-bold bg-white cursor-pointer hover:bg-[#f50] hover:text-white transition-all justify-center'>
                             Try for free now
                             <ArrowRight size={18} />
                         </button>
                     </Link>
 
-                    <Link to={'/archie-tour'}>
+                    <Link to={'/tour'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                         <button className='flex items-center gap-3 px-4 py-2 bg-[#f50] rounded-lg text-white font-bold hover:bg-white hover:text-[#f50] border-[1.5px] border-[#f50] transition-all cursor-pointer justify-center'>
                             Take a tour
                             <ArrowRight size={18} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'motion/react'
 
 const ReviewSection = ({ title, image1, name1, role1, desc1, image2, name2, role2, desc2, image3, name3, role3, desc3 }) => {
 
@@ -7,19 +8,25 @@ const ReviewSection = ({ title, image1, name1, role1, desc1, image2, name2, role
             image: image1,
             name: name1,
             role: role1,
-            desc: desc1
+            desc: desc1,
+            duration: 0.5,
+            y: 30
         },
         {
             image: image2,
             name: name2,
             role: role2,
-            desc: desc2
+            desc: desc2,
+            duration: 0.7,
+            y: 50
         },
         {
             image: image3,
             name: name3,
             role: role3,
-            desc: desc3
+            desc: desc3,
+            duration: 0.9,
+            y: 90
         }
     ]
 
@@ -31,7 +38,12 @@ const ReviewSection = ({ title, image1, name1, role1, desc1, image2, name2, role
 
             <div className='pt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {reviews.map((review, idx) => (
-                    <div key={idx} className='border p-5 shadow-xs border-[#858fa133] rounded-2xl flex flex-col items-center'>
+                    <motion.div key={idx}
+                        initial={{ opacity: 0, y: review.y }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: review.duration, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className='border p-5 shadow-xs border-[#858fa133] rounded-2xl flex flex-col items-center'>
                         <div className='flex items-center gap-3'>
                             <img src={review.image} alt={review.name} className='size-14' />
                             <div className='text-[#212e44]'>
@@ -43,7 +55,7 @@ const ReviewSection = ({ title, image1, name1, role1, desc1, image2, name2, role
                         <div className='pt-5 text-center'>
                             <p className='text-[#5d6a82]'>{review.desc}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

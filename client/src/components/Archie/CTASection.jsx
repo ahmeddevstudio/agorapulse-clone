@@ -1,6 +1,7 @@
 import { ArrowRight, MessageSquareText, Sparkles } from 'lucide-react';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 const CTASection = () => {
 
@@ -26,7 +27,12 @@ const CTASection = () => {
     return (
         <div className='px-4 [@media(min-width:1400px)]:px-24 py-15 lg:py-20'>
             <div>
-                <h2 className='text-[#021a41] text-4xl font-black text-center'>Create With <span className='text-[#f50]'>Archie</span>. Manage it All With <span className='text-[#f50]'>Agorapulse</span>.</h2>
+                <motion.h2
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.3, ease: "linear" }}
+                    viewport={{ once: true }}
+                    className='text-[#021a41] text-4xl font-black text-center'>Create With <span className='text-[#f50]'>Archie</span>. Manage it All With <span className='text-[#f50]'>Agorapulse</span>.</motion.h2>
             </div>
 
             <div className='grid grid-cols-1 lg:grid-cols-2 items-center gap-10 pt-10'>
@@ -71,8 +77,8 @@ const CTASection = () => {
             </div>
 
             <div className='pt-20 flex justify-center'>
-                <Link to={'/demo'}>
-                    <button className='flex items-center gap-2 bg-[#f50] px-4 py-3 text-white font-black cursor-pointer border border-transparent rounded hover:bg-transparent hover:border-[#f50] hover:text-[#f50] hover:gap-3 transition-all duration-300'>Book an Agorapulse demo <ArrowRight size={20}/></button>
+                <Link to={'/demo'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
+                    <button className='flex items-center gap-2 bg-[#f50] px-4 py-3 text-white font-black cursor-pointer border border-transparent rounded hover:bg-transparent hover:border-[#f50] hover:text-[#f50] hover:gap-3 transition-all duration-300'>Book an Agorapulse demo <ArrowRight size={20} /></button>
                 </Link>
             </div>
         </div>

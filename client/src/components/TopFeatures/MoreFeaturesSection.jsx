@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import { motion } from 'motion/react'
 
 const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgImage, icon1, title1, desc1, icon2, title2, desc2, icon3, title3, desc3, icon4, title4, desc4, icon5, title5, desc5, icon6, title6, desc6, icon7, title7, desc7, icon8, title8, desc8, icon9, title9, desc9, grid2 }) => {
 
@@ -17,9 +18,14 @@ const MoreFeaturesSection = ({ title, PMBgColor, LightBgColor, PMTextColor, BgIm
 
     return (
         <div className="nunito-sans py-16">
-            <div className="text-center mb-12 px-4">
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-center mb-12 px-4">
                 <h2 className="text-4xl font-black text-[#212e44]">{title}</h2>
-            </div>
+            </motion.div>
 
             <div
                 className={`pt-10 pb-28 px-4 [@media(min-width:1400px)]:px-24 grid grid-cols-1 md:grid-cols-2 ${grid2 ? 'lg:grid-cols-2' : 'lg:grid-cols-3'} gap-10 rounded-b-3xl`}

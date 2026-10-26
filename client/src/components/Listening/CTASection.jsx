@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 
 const CTASection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -45,14 +46,24 @@ const CTASection = () => {
   return (
     <div className='px-4 [@media(min-width:1400px)]:px-24 py-16 bg-white'>
       <div className='text-center max-w-3xl mx-auto mb-16'>
-        <div className='text-center'>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className='text-center'>
           <h2 className='text-4xl font-extrabold [-webkit-text-stroke:1.5px] text-[#212e44]'>
             It's never been easier to stay <div>ahead of your market</div>
           </h2>
-        </div>
+        </motion.div>
       </div>
 
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto'>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className='grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto'>
         <div className='lg:col-span-6 space-y-4'>
           {cards.map((card, idx) => {
             const isActive = activeIndex === idx;
@@ -93,8 +104,8 @@ const CTASection = () => {
                 <div
                   key={idx}
                   className={`col-start-1 row-start-1 transition-all duration-500 ease-out transform ${isActive
-                      ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto z-10'
-                      : 'opacity-0 scale-95 translate-y-4 pointer-events-none z-0'
+                    ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto z-10'
+                    : 'opacity-0 scale-95 translate-y-4 pointer-events-none z-0'
                     }`}
                 >
                   <img
@@ -108,11 +119,11 @@ const CTASection = () => {
           </div>
         </div>
 
-      </div>
+      </motion.div>
 
       <div className='flex justify-center pt-10'>
-        <Link to={'/demo'}>
-            <button className='flex items-center gap-2 font-extrabold bg-[#2fd9c4] py-3 px-4 text-white rounded-lg border border-transparent cursor-pointer hover:bg-transparent hover:text-[#2fd9c4] hover:border-[#2fd9c4] transition-all duration-300 hover:gap-3'>Book a Demo <ArrowRight size={18} strokeWidth={2.5}/></button>
+        <Link to={'/demo'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
+          <button className='flex items-center gap-2 font-extrabold bg-[#2fd9c4] py-3 px-4 text-white rounded-lg border border-transparent cursor-pointer hover:bg-transparent hover:text-[#2fd9c4] hover:border-[#2fd9c4] transition-all duration-300 hover:gap-3'>Book a Demo <ArrowRight size={18} strokeWidth={2.5} /></button>
         </Link>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'motion/react'
 
 const TrustBar = ({title, c1, image1, c2, image2, c3, image3, c4, image4, c5, image5, c6, image6,}) => {
 
@@ -31,9 +32,14 @@ const TrustBar = ({title, c1, image1, c2, image2, c3, image3, c4, image4, c5, im
 
   return (
     <div className='px-15 [@media(min-width:1400px)]:px-30 py-15'>
-        <div>
+        <motion.div
+        initial={{opacity: 0, y: 30}}
+        whileInView={{opacity: 1, y:0}}
+        transition={{duration: 0.8, ease: 'easeOut'}}
+        viewport={{once: true}}
+        >
             <h2 className='text-center text-[#212e44] text-4xl font-extrabold'>{title}</h2>
-        </div>
+        </motion.div>
 
         <div className='pt-10 flex gap-15 lg:justify-between items-center flex-wrap justify-center'>
             {companies.map((item, idx)=>(

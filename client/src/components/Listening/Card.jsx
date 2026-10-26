@@ -1,5 +1,6 @@
 import { RadioTower, Send, Share2 } from 'lucide-react';
 import React from 'react'
+import { motion } from 'motion/react';
 
 const Card = () => {
 
@@ -23,26 +24,49 @@ const Card = () => {
 
     return (
         <div className='px-4 [@media(min-width:1400px)]:px-24 py-15 text-[#212e44] bg-[#f3fffe]'>
-            <div className='text-center'>
-                <h2 className='text-4xl font-extrabold [-webkit-text-stroke:1.5px]'>Social listening that ends in a decision, not a dashboard</h2>
+            <div className="text-center">
+                <motion.h2
+                    initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="text-4xl font-extrabold [-webkit-text-stroke:1.5px]"
+                >
+                    Social listening that ends in a decision, not a dashboard
+                </motion.h2>
             </div>
 
-            <div className='pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-                {cards.map((card, idx)=>{
+            <div className="pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {cards.map((card, idx) => {
                     const Icon = card.Icon;
 
                     return (
-                        <div key={idx} className='bg-white p-8 flex flex-col items-center rounded-2xl shadow-lg shadow-[#2fd9c41a]'>
-                            <div className='flex flex-col items-center'>
-                                <Icon color='#2fd9c4' size={28}/>
-                                <h4 className='pt-5 text-[#212e44] text-lg font-bold'>{card.title}</h4>
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.6,
+                                delay: idx * 0.15,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            className="bg-white p-8 flex flex-col items-center rounded-2xl shadow-lg shadow-[#2fd9c41a]"
+                        >
+                            <div className="flex flex-col items-center">
+                                <Icon color="#2fd9c4" size={28} />
+                                <h4 className="pt-5 text-[#212e44] text-lg font-bold">
+                                    {card.title}
+                                </h4>
                             </div>
 
                             <div>
-                                <p className='text-center text-[#212e44] pt-8 text-lg font-medium'>{card.desc}</p>
+                                <p className="text-center text-[#212e44] pt-8 text-lg font-medium">
+                                    {card.desc}
+                                </p>
                             </div>
-                        </div>
-                    )
+                        </motion.div>
+                    );
                 })}
             </div>
         </div>

@@ -223,7 +223,7 @@ const Navbar = () => {
             {/* DESKTOP NAVBAR */}
             <div className='lg:flex hidden items-center justify-between px-8 h-19 [@media(min-width:1400px)]:px-24 sticky top-0 z-999 bg-white border-b border-gray-100'>
                 <div className='flex gap-8 items-center h-full'>
-                    <Link to='/' className='flex items-center'>
+                    <Link to='/' onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})} className='flex items-center'>
                         <img
                             src={assets.agorapulse_logo}
                             alt='agorapulse-logo'
@@ -252,7 +252,7 @@ const Navbar = () => {
                             </h3>
                         </li>
 
-                        <li className='cursor-pointer flex items-center h-full hover:text-[#f50] transition-colors text-sm' onClick={() => setActiveDropdown(null)}>
+                        <li className='cursor-pointer flex items-center h-full hover:text-[#f50] transition-colors text-sm' onClick={() => {setActiveDropdown(null); window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}}>
                             <Link to='/pricing'>
                                 Pricing
                             </Link>

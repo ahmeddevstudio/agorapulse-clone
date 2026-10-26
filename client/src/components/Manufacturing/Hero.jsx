@@ -15,11 +15,11 @@ const Hero = ({ tag, title, desc, bgImage, gradient = true }) => {
                 <p className='pt-5 text-center'>{desc}</p>
 
                 <div className='pt-10 flex flex-col md:flex-row gap-3 items-center'>
-                    <Link to={'/signup'}>
+                    <Link to={'/signup'} onClick={()=>window.scrollTo({'top':0, 'left': 0, 'behavior': 'smooth'})}>
                         <button className='flex items-center gap-2 bg-white py-3 px-5 rounded-lg text-[#3a9efe] font-extrabold cursor-pointer border border-[#3a9efe] hover:bg-[#3a9efe] hover:text-white hover:border-transparent transition-all duration-300 hover:gap-3'>Free trail <ArrowRight size={18} /></button>
                     </Link>
 
-                    <Link to={'/demo'}>
+                    <Link to={'/demo'} onClick={()=>window.scrollTo({'top':0, 'left': 0, 'behavior': 'smooth'})}>
                         <button className='flex items-center gap-2 bg-[#3a9efe] py-3 px-5 rounded-lg text-white font-extrabold cursor-pointer border border-transparent hover:bg-white hover:text-[#3a9efe] hover:border-[#3a9efe] transition-all duration-300 hover:gap-3'>Request a demo <ArrowRight size={18} /></button>
                     </Link>
                 </div>

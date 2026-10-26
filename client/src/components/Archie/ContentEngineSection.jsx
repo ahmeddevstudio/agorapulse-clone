@@ -1,6 +1,7 @@
 import { ArrowRight, Lightbulb, MessageSquareText, Monitor, Sparkles } from 'lucide-react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
 
 const ContentEngineSection = () => {
     const [activeIndex, setActiveIndex] = useState(0)
@@ -48,13 +49,23 @@ const ContentEngineSection = () => {
 
     return (
         <div className='px-4 [@media(min-width:1400px)]:px-24 py-15'>
-            <div>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+            >
                 <h2 className='text-[#021a41] font-black text-4xl text-center'>
                     The <span className='text-[#f50]'>AI Content Engine</span> for Modern Social Media Teams
                 </h2>
-            </div>
+            </motion.div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center'>
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className='grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12 items-center'>
                 <div className='flex flex-col gap-4'>
                     {cards.map((card, index) => {
                         const IconComponent = card.Icon
@@ -65,8 +76,8 @@ const ContentEngineSection = () => {
                                 key={index}
                                 onClick={() => handleCardClick(index)}
                                 className={`cursor-pointer p-6 rounded-2xl transition-all duration-300 border ${isActive
-                                        ? 'bg-[#f7ffc566] border-[#f50]/30 shadow-lg'
-                                        : 'bg-transparent border-transparent hover:bg-white/50 shadow-xs'
+                                    ? 'bg-[#f7ffc566] border-[#f50]/30 shadow-lg'
+                                    : 'bg-transparent border-transparent hover:bg-white/50 shadow-xs'
                                     }`}
                             >
                                 <div className='flex items-start gap-4'>
@@ -106,10 +117,10 @@ const ContentEngineSection = () => {
                         className={`max-w-full h-auto object-contain transition-opacity duration-300 ${opacity}`}
                     />
                 </div>
-            </div>
+            </motion.div>
 
             <div className='pt-15 flex justify-center'>
-                <Link to={'/signup'}>
+                <Link to={'/signup'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                     <button className='flex items-center gap-2 bg-[#f50] px-4 py-3 font-black text-white rounded-lg cursor-pointer border border-transparent hover:bg-transparent hover:border-[#f50] hover:text-[#f50] transition-all'>
                         Try for free <ArrowRight size={18} />
                     </button>

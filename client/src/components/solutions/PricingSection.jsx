@@ -10,7 +10,7 @@ const PricingSection = () => {
 
                 <p className='max-w-2xl text-center pt-5 text-xl font-medium text-[#212e44]'>We offer an unbeatable price for the most complete solution for agencies. Our pricing helps you to easily calculate the cost of adding a new client, so you can factor that into your pricing. No surprises when billed! Just clear, honest pricing.</p>
 
-                <Link to={'/pricing'}>
+                <Link to={'/pricing'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                     <button className='mt-10 flex items-center gap-2 bg-[#ff6726] py-3 px-5 rounded-lg text-white font-extrabold cursor-pointer border border-transparent hover:bg-transparent hover:text-[#ff6726] hover:border-[#ff6726] transition-all duration-300 hover:gap-3'>Discover plans <ArrowRight size={18} /></button>
                 </Link>
             </div>

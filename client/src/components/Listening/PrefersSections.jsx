@@ -1,5 +1,6 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import { motion } from 'motion/react'
 
 const PrefersSections = () => {
 
@@ -47,11 +48,16 @@ const PrefersSections = () => {
 
     return (
         <div className='px-4 sm:px-8 [@media(min-width:1400px)]:px-24 py-12 sm:py-16 bg-[#CFECEA] bg-cover bg-no-repeat overflow-hidden' style={{ 'backgroundImage': 'url("https://www.agorapulse.com/assets/hv2-feature-monitoring/bg-business-sm-1.png")' }}>
-            <div className='text-center mb-10 sm:mb-12'>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className='text-center mb-10 sm:mb-12'>
                 <h2 className='text-3xl sm:text-4xl font-extrabold text-[#212e44] [-webkit-text-stroke:0.5px]'>
                     Why users prefer Agorapulse
                 </h2>
-            </div>
+            </motion.div>
 
             <div className='max-w-7xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden relative pb-6 sm:pb-8 px-4 sm:px-6 md:px-10'>
                 <div className='hidden md:grid grid-cols-3 px-6 md:px-12 py-6 items-center text-center font-bold text-[#212e44] relative z-10'>

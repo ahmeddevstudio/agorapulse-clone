@@ -48,7 +48,7 @@ const Hero = ({ title, PMText, PMColor, desc, image }) => {
                 </div>
 
                 <div className='pt-10 flex flex-col md:flex-row items-center md:items-start gap-4'>
-                    <Link to={'/signup'}>
+                    <Link to={'/signup'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                         <button
                             style={{
                                 borderColor: PMColor,
@@ -61,7 +61,7 @@ const Hero = ({ title, PMText, PMColor, desc, image }) => {
                         </button>
                     </Link>
 
-                    <Link to={'/demo'}>
+                    <Link to={'/demo'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                         <button style={{ 'borderColor': `${PMColor}`, '--hoverBg': `${PMColor}`, '--color': `${PMColor}` }} className={`flex items-center gap-2 font-black border px-4 py-2 rounded bg-(--hoverBg) cursor-pointer text-white transition-all hover:bg-white hover:text-(--color)`}>Book a demo <ArrowRight size={20} /></button>
                     </Link>
                 </div>

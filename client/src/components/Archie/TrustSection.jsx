@@ -1,5 +1,6 @@
 import { Eye, LockKeyhole, UserRound, ChevronDown } from 'lucide-react'
 import React, { useState } from 'react'
+import { motion } from 'motion/react';
 
 const TrustSection = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -28,12 +29,22 @@ const TrustSection = () => {
 
     return (
         <div className='px-4 [@media(min-width:1400px)]:px-24 py-15 lg:py-20 bg-trustSection-gradient grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
-            <div>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+            >
                 <h2 className='text-[#021a41] text-4xl font-black'>Trusted AI. <span className='md:text-[#f50] text-[#f6ffc4]'>Protected Data.</span> Human Control.</h2>
                 <img src="https://www.agorapulse.com/assets/hv2-feature-archie/archie-trusted-ai-tool-1-EN.webp" alt="Archie AI tool" className='h-auto pt-10' />
-            </div>
+            </motion.div>
 
-            <div className='flex flex-col gap-4'>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className='flex flex-col gap-4'>
                 {cards.map((card, idx) => {
                     const Icon = card.Icon;
                     const isOpen = activeIndex === idx;
@@ -43,8 +54,8 @@ const TrustSection = () => {
                             key={idx}
                             onClick={() => toggleCard(idx)}
                             className={`cursor-pointer p-6 rounded-2xl border ${isOpen
-                                    ? 'bg-[#f6ffc4] shadow-lg border-[#f50]'
-                                    : 'bg-white border-transparent shadow-sm'
+                                ? 'bg-[#f6ffc4] shadow-lg border-[#f50]'
+                                : 'bg-white border-transparent shadow-sm'
                                 }`}
                         >
                             <div className='flex items-center justify-between'>
@@ -66,7 +77,7 @@ const TrustSection = () => {
                         </div>
                     )
                 })}
-            </div>
+            </motion.div>
         </div>
     )
 }

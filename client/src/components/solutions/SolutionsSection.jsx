@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronUp, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react'
 
 const SolutionsSection = ({ title, span, title1, desc1, image1, title2, desc2, image2, title3, desc3, image3, title4, desc4, image4, title5, desc5, image5 }) => {
 
@@ -28,13 +29,23 @@ const SolutionsSection = ({ title, span, title1, desc1, image1, title2, desc2, i
 
     return (
         <div className='px-6 md:px-15 [@media(min-width:1400px)]:px-30 py-15 bg-cover bg-no-repeat' style={{ 'backgroundImage': 'url("https://www.agorapulse.com/assets/hv2-home/pattern-orange.svg")' }}>
-            <div className='mb-12'>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                className='mb-12'>
                 <h2 className='text-center text-[#212e44] text-3xl md:text-5xl font-superbold'>
                     {title} <span className='text-[#ff6726]'>{span}</span>
                 </h2>
-            </div>
+            </motion.div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
                 <div className='lg:col-span-6 flex flex-col'>
                     {sections.map((section, index) => {
                         const isOpen = activeIndex === index;
@@ -106,7 +117,7 @@ const SolutionsSection = ({ title, span, title1, desc1, image1, title2, desc2, i
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
         </div>
     );
 };

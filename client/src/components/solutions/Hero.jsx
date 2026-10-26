@@ -10,11 +10,11 @@ const Hero = ({ mainTitle1, mainTitle2, span, desc, image }) => {
                 <p className='pt-5 font-medium'>{desc}</p>
 
                 <div className='pt-10'>
-                    <Link to={'/contact'}>
+                    <Link to={'/contact'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                         <button className='flex items-center gap-2 bg-[#ff6726] py-4 px-5 rounded-lg text-white font-extrabold cursor-pointer border border-transparent hover:bg-transparent hover:text-[#ff6726] hover:border-[#ff6726] transition-all duration-300 hover:gap-3'>Contact us <ArrowRight size={18} /></button>
                     </Link>
 
-                    <Link to={'/demo'}>
+                    <Link to={'/demo'} onClick={()=>window.scrollTo({'top': 0, 'left': 0, 'behavior': 'smooth'})}>
                         <p className='pt-5 underline text-sm text-[#212e44]'>Watch a free demo of Agorapulse</p>
                     </Link>
                 </div>
