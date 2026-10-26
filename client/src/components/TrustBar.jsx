@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'motion/react'
 
 const TrustBar = () => {
 
@@ -60,7 +61,12 @@ const TrustBar = () => {
     return (
         <div className='px-4 [@media(min-width:1400px)]:px-24 py-5'>
             <div className='pt-5'>
-                <h3 className='text-2xl text-center text-[#021a41] font-semibold'>Over 31K+ social media managers use our tool daily</h3>
+                <motion.h3 
+                initial={{opacity: 0, y: 30}}
+                whileInView={{opacity: 1, y:0}}
+                transition={{duration: 0.8, ease: 'easeOut'}}
+                viewport={{once: true}}
+                className='text-2xl text-center text-[#021a41] font-semibold'>Over 31K+ social media managers use our tool daily</motion.h3>
             </div>
 
             <div className="overflow-hidden pt-8">

@@ -2,8 +2,9 @@ import React from 'react'
 import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'motion/react'
 
-const IntegrationsSection = ({title, desc}) => {
+const IntegrationsSection = ({ title, desc }) => {
     const integrationsImg = [
         {
             name: "Facebook",
@@ -114,7 +115,12 @@ const IntegrationsSection = ({title, desc}) => {
                 }}
             />
 
-            <div className="relative flex flex-col gap-5 px-4 text-[#021a41] max-w-xl">
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                className="relative flex flex-col gap-5 px-4 text-[#021a41] max-w-xl">
                 <p className="font-semibold">Integrations</p>
 
                 <h2 className="text-4xl font-bold">
@@ -125,14 +131,14 @@ const IntegrationsSection = ({title, desc}) => {
                     {desc}
                 </p>
 
-                <Link to="/integrations" className="w-fit">
+                <Link to="/integrations" onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })} className="w-fit">
                     <button className="border-[1.5px] border-[#f50] px-5 py-2 text-[#f50] rounded-full font-medium cursor-pointer flex items-center gap-4 hover:bg-[#f7ffc5] transition-all">
                         See all Integrations
                         <ArrowRight size={20} />
                     </button>
                 </Link>
-            </div>
-            
+            </motion.div>
+
             <div className="relative grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 xl:grid-cols-5 gap-8 place-items-center content-center px-4 lg:px-0">
                 {integrationsImg.map((int) => (
                     <div

@@ -20,12 +20,12 @@ const CTASection = () => {
             </div>
 
             <div className='flex flex-col sm:flex-row lg:flex-col gap-4 justify-center items-center lg:items-start w-full'>
-                <Link to={'/signup'} className='w-full sm:w-auto flex justify-center lg:justify-start'>
+                <Link to={'/signup'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })} className='w-full sm:w-auto flex justify-center lg:justify-start'>
                     <button className='w-full sm:w-auto px-5 py-2.5 sm:py-2 border-[1.5px] border-[#f50] text-[#f50] flex items-center justify-center gap-4 rounded-full cursor-pointer hover:bg-[#f7ffc5] transition-all font-medium'>
                         Try for free <ArrowRight size={20} />
                     </button>
                 </Link>
-                <Link to={'/demo'} className='w-full sm:w-auto flex justify-center lg:justify-start'>
+                <Link to={'/demo'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })} className='w-full sm:w-auto flex justify-center lg:justify-start'>
                     <button className='w-full sm:w-auto px-4 py-2.5 sm:py-2 flex items-center justify-center gap-4 bg-[#f50] text-white rounded-full font-medium cursor-pointer hover:bg-[#f7ffc5] hover:text-black border-[1.5px] transition-all'>
                         Book a demo <ArrowRight size={20} />
                     </button>

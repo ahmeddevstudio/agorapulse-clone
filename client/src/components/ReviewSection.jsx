@@ -1,5 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
 
 const ReviewSection = () => {
   const reviews = [
@@ -34,13 +36,23 @@ const ReviewSection = () => {
 
   return (
     <div className="px-4 [@media(min-width:1400px)]:px-32 py-15">
-      <div className="flex justify-center text-center text-[#021a41]">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="flex justify-center text-center text-[#021a41]">
         <h3 className="text-3xl sm:text-4xl font-bold">
           What makes <span className="text-[#f50]">Agorapulse great?</span>
         </h3>
-      </div>
+      </motion.div>
 
-      <div className="pt-15 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 items-stretch">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="pt-15 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 items-stretch">
         {reviews.map((review, idx) => (
           <div key={idx} className="flex flex-col h-full min-w-0">
             <div className="md:flex flex-col gap-5 sm:gap-6 text-[#021a41] hidden">
@@ -80,7 +92,7 @@ const ReviewSection = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
 
       <div className='pt-20 px-10 grid grid-cols-1 lg:grid-cols-[60%_40%] gap-10 lg:gap-0'>
         <div>
@@ -104,7 +116,9 @@ const ReviewSection = () => {
           </div>
 
           <div className='pt-5'>
-            <button className='flex items-center border-[1.5px] border-[#f50] text-[#f50] py-2 px-4 rounded-full gap-4 cursor-pointer font-medium hover:bg-[#f7ffc5] transition-all'>See success stories <ArrowRight size={20} /></button>
+            <Link to="/resources" onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+              <button className='flex items-center border-[1.5px] border-[#f50] text-[#f50] py-2 px-4 rounded-full gap-4 cursor-pointer font-medium hover:bg-[#f7ffc5] transition-all'>See success stories <ArrowRight size={20} /></button>
+            </Link>
           </div>
         </div>
       </div>

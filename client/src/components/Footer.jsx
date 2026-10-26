@@ -192,7 +192,7 @@ const Footer = () => {
 
                     <div className='flex gap-3 flex-wrap'>
                         {socialMediaLinks.map((social, idx)=>(
-                            <div>
+                            <div key={idx}>
                                 <img src={social.url} alt={social.platform} className='h-6 w-6 object-contain'/>
                             </div>
                         ))}

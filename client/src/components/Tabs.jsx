@@ -1,7 +1,8 @@
 import { ArrowRight, ChartColumnIncreasing, Gauge, Globe, Inbox, Send } from 'lucide-react'
 import React, { act, useState } from 'react'
 import { assets } from '../assets/assets'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
 
 const Tabs = () => {
 
@@ -17,6 +18,7 @@ const Tabs = () => {
             list3: 'Enhance your engagement and improve customer experience.',
             image: assets.tab_inbox,
             button: 'Explore Inbox',
+            to: '/inbox',
             color: '#ff5353',
             hoverColor: 'hover:bg-[#fff9f4]'
         },
@@ -31,6 +33,7 @@ const Tabs = () => {
             list3: 'Enhance internal and external team collaboration.',
             image: assets.publishing_tab,
             button: 'Explore Publishing',
+            to: '/publishing',
             color: '#7a66f0',
             hoverColor: 'hover:bg-[#f6f8ff]'
         },
@@ -45,6 +48,7 @@ const Tabs = () => {
             list3: 'Find out customer requirements and enhance brand loyalty.',
             image: assets.listing_tab,
             button: 'Explore Listening',
+            to: '/listening',
             color: '#2fd9c4',
             hoverColor: 'hover:bg-[#f3fffe]'
         },
@@ -59,6 +63,7 @@ const Tabs = () => {
             list3: 'Build and automate custom, presentation-ready social media reports.',
             image: assets.reporting_tab,
             button: 'Explore Reporting',
+            to: '/reporting',
             color: '#3a9efe',
             hoverColor: 'hover:bg-[#f5fdff]'
         },
@@ -73,6 +78,7 @@ const Tabs = () => {
             list3: 'Understand where to use your budget effectively.',
             image: assets.roi_tab,
             button: 'Explore ROI',
+            to: '/roi',
             color: '#ff5353',
             hoverColor: 'hover:bg-[#fff9f9]'
         }
@@ -85,10 +91,20 @@ const Tabs = () => {
     return (
         <div className='px-4 py-15 [@media(min-width:1400px)]:px-24'>
             <div className='text-center'>
-                <h1 className='text-[#021a41] text-4xl font-semibold'>Features to boost efficiency and save time</h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    viewport={{ once: true }}
+                    className='text-[#021a41] text-4xl font-semibold'>Features to boost efficiency and save time</motion.h1>
             </div>
 
-            <div className='grid grid-cols-2 md:grid-cols-5 gap-3 pt-15'>
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                className='grid grid-cols-2 md:grid-cols-5 gap-3 pt-15'>
                 {tabsData.map((tab) => {
                     const Icon = tab.Icon;
                     const isActive = activeTabId === tab.id;
@@ -100,9 +116,14 @@ const Tabs = () => {
                         </button>
                     )
                 })}
-            </div>
+            </motion.div>
 
-            <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-105">
+            <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-105">
                 <div className="space-y-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#021a41] leading-tight">
                         {activeTab.title}
@@ -127,11 +148,13 @@ const Tabs = () => {
                     </ul>
 
                     <div className="pt-4">
-                        <button
-                            className="px-6 py-3 cursor-pointer rounded-full text-[#f50] font-medium transition-opacity duration-200 hover:bg-[#f7ffc5] border-[1.5px] border-[#f50] flex items-center gap-4">
-                            {activeTab.button}
-                            <ArrowRight size={20} />
-                        </button>
+                        <Link to={activeTab.to} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                            <button
+                                className="px-6 py-3 cursor-pointer rounded-full text-[#f50] font-medium transition-opacity duration-200 hover:bg-[#f7ffc5] border-[1.5px] border-[#f50] flex items-center gap-4">
+                                {activeTab.button}
+                                <ArrowRight size={20} />
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -142,14 +165,16 @@ const Tabs = () => {
                         className="w-full max-w-2xl h-auto rounded-2xl object-cover"
                     />
                 </div>
-            </div>
+            </motion.div>
 
             <div className='flex flex-col md:flex-row justify-center items-center pt-25 gap-5'>
-                <Link to={'/signup'}>
+                <Link to={'/signup'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
                     <button className="px-6 py-3 cursor-pointer rounded-full text-[#f50] font-medium transition-all duration-200 hover:bg-[#f7ffc5] border-[1.5px] border-[#f50] flex items-center gap-4">Try for free <ArrowRight size={20} /></button>
                 </Link>
 
-                <button className='flex px-6 py-3 cursor-pointer rounded-full bg-[#f50] text-white gap-4 font-medium transition-all duration-200 hover:bg-[#f7ffc5] hover:text-black border-[1.5px]'>Book a demo <ArrowRight /></button>
+                <Link to={'/demo'} onClick={() => window.scrollTo({ 'top': 0, 'left': 0, 'behavior': 'smooth' })}>
+                    <button className='flex px-6 py-3 cursor-pointer rounded-full bg-[#f50] text-white gap-4 font-medium transition-all duration-200 hover:bg-[#f7ffc5] hover:text-black border-[1.5px]'>Book a demo <ArrowRight /></button>
+                </Link>
             </div>
         </div>
     )
