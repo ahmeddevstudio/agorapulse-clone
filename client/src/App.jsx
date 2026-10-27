@@ -27,6 +27,7 @@ import Demo from './pages/Demo'
 import Tour from './pages/Tour'
 import Integrations from './pages/Integrations'
 import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 const App = () => {
 
@@ -61,6 +62,7 @@ const App = () => {
         <Route path='/tour' element={<Tour />}/>
         <Route path='/integrations' element={<Integrations />}/>
         <Route path='/contact' element={<Contact />}/>
+        <Route path='*' element={<NotFound />}/>
       </Routes>
       
       {location.pathname !== '/signup' && location.pathname !== '/log-in' && <Footer />}
