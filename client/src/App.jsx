@@ -26,6 +26,7 @@ import LogIn from './pages/LogIn'
 import Demo from './pages/Demo'
 import Tour from './pages/Tour'
 import Integrations from './pages/Integrations'
+import Contact from './pages/Contact'
 
 const App = () => {
 
@@ -59,6 +60,7 @@ const App = () => {
         <Route path='/demo' element={<Demo />}/>
         <Route path='/tour' element={<Tour />}/>
         <Route path='/integrations' element={<Integrations />}/>
+        <Route path='/contact' element={<Contact />}/>
       </Routes>
       
       {location.pathname !== '/signup' && location.pathname !== '/log-in' && <Footer />}
